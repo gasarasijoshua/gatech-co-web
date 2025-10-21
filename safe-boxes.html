@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Boxes - GATECH-CO LTD | Premium Security Solutions</title>
+    <meta name="description" content="Discover our range of premium safe boxes including small safes for home and office. Fireproof, waterproof, and secure solutions for Rwanda.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #c32b2b;
+            --primary-dark: #9c2121;
+            --secondary: #1a365d;
+            --accent: #e9b949;
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+            --gray: #6c757d;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .company-name h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .company-name p {
+            font-size: 0.85rem;
+            margin: 0;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .back-btn {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+        }
+
+        .back-btn i {
+            margin-right: 8px;
+        }
+
+        /* Product Hero Section */
+        .product-hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--light) 0%, #fff 100%);
+        }
+
+        .product-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .product-images {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .main-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info h1 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .product-features li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features li i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 32px;
+            background-color: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(195, 43, 43, 0.3);
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(195, 43, 43, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+
+        /* Specifications Section */
+        .specifications {
+            padding: 4rem 0;
+            background-color: var(--light);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .spec-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .spec-card h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .spec-card h3 i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+
+        .spec-list {
+            list-style: none;
+        }
+
+        .spec-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .spec-list li:last-child {
+            border-bottom: none;
+        }
+
+        .spec-name {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .spec-value {
+            color: var(--gray);
+        }
+
+        /* Other Products Section */
+        .other-products {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-content h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-content p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-info, .footer-contact {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-info h3, .footer-contact h3 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .product-hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-info h1 {
+                font-size: 2rem;
+            }
+
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/mF0JPYTn/logo.jpg" alt="GATECH-CO LTD Logo" class="logo">
+                <div class="company-name">
+                    <h1>GATECH-CO LTD</h1>
+                    <p>Security Solutions</p>
+                </div>
+            </div>
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Main Site
+            </a>
+        </div>
+    </header>
+
+    <!-- Product Hero Section -->
+    <section class="product-hero">
+        <div class="container">
+            <div class="product-hero-content">
+                <div class="product-images">
+                    <img src="https://i.ibb.co/p6RXDmLj/small-safe.webp" alt="Small Safe Box" class="main-image">
+                </div>
+                <div class="product-info">
+                    <h1>Compact Home Safe Box</h1>
+                    <div class="product-price">RWF 85,000 - 150,000</div>
+                    <p>Perfect for home and small office use, our compact safe box provides reliable security for your valuables, documents, and personal items. Designed with both security and convenience in mind.</p>
+                    
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Fireproof up to 30 minutes at 843°C</li>
+                        <li><i class="fas fa-check"></i> Waterproof protection</li>
+                        <li><i class="fas fa-check"></i> Electronic keypad lock</li>
+                        <li><i class="fas fa-check"></i> Emergency override keys</li>
+                        <li><i class="fas fa-check"></i> Compact size: 30x25x25 cm</li>
+                        <li><i class="fas fa-check"></i> Easy installation</li>
+                    </ul>
+
+                    <div class="product-actions">
+                        <a href="https://wa.me/250788202333?text=Hello%20GATECH-CO%20LTD!%20I'm%20interested%20in%20the%20Compact%20Home%20Safe%20Box." target="_blank" class="btn">
+                            <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                        </a>
+                        <a href="tel:+250788202333" class="btn btn-secondary">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="specifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Specifications</h2>
+                <p>Detailed specifications of our compact home safe box</p>
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <h3><i class="fas fa-ruler"></i> Dimensions & Weight</h3>
+                    <ul class="spec-list">
+                        <li>
+                            <span class="spec-name">External Dimensions</span>
+                            <span class="spec-value">30 x 25 x 25 cm</span>
+                        </li>
+                        <li>
+                            <span class="spec-name">Internal Dimensions</span>
+                            <span class="spec-value">28 x 23 x 23 cm</span>
+                        </li>
+                        <li>
+                            <span class="spec-name">Weight</span>
+                            <span class="spec-value">15 kg</span>
+                        </li>
+                        <li>
+                            <span class="spec-name">Color</span>
+                            <span class="spec-value">Grey / Black</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="spec-card">
+                    <h3><i class="fas fa-shield-alt"></i> Security Features</h3>
+                    <ul class="spec-list">
+                        <li>
+                            <span class="spec-name">Lock Type</span>
+                            <span class="spec-value">Electronic Keypad</span>
+                        </li>
+                        <li>
+                            <span class="spec-name">Fire Rating</span>
+                            <span class="spec-value">30 minutes at 843°C</span>
+                        </li>
+                        <li>
+                            <span class="spec-name">Waterproof</span>
+                            <span class="spec-value">Yes</span>
+                        </li>
+                        <li>
+                            <span class="spec-name">Emergency Keys</span>
+                            <span class="spec-value">2 override keys</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="spec-card">
+                    <h3><i class="fas fa-cube"></i> Storage Capacity</h3>
+                    <ul class="spec-list">
+                        <li>
+                            <span class="spec-name">Cash Capacity</span>
+                            <span class="spec-value">Up to RWF 5,000,000</span>
+                        </li>
+                        <li>
+                            <span class="spec-name">Document Storage</span>
+                            <span class="spec-value">A4 folders</span>
+                        </li>
+                        <li>
+                            <span class="spec-name">Jewelry</span>
+                            <span class="spec-value">Small valuables</span>
+                        </li>
+                        <li>
+                            <span class="spec-name">Shelf</span>
+                            <span class="spec-value">Removable shelf included</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Products Section -->
+    <section class="other-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Other Safe Box Models</h2>
+                <p>Explore our complete range of security solutions</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://i.ibb.co/S7c6xgMc/860.jpg');"></div>
+                    <div class="product-content">
+                        <h3>Medium Office Safe</h3>
+                        <p>Larger capacity safe perfect for small businesses and offices with enhanced security features.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://i.ibb.co/p6RXDmLj/small-safe.webp');"></div>
+                    <div class="product-content">
+                        <h3>Compact Home Safe</h3>
+                        <p>Perfect for home use with fireproof and waterproof protection for your valuables.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);"></div>
+                    <div class="product-content">
+                        <h3>Wall Safe</h3>
+                        <p>Discreet wall-mounted safe for hidden security solutions in homes and offices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Secure Your Valuables?</h2>
+            <p>Contact us today for a free consultation and professional installation service</p>
+            <a href="https://wa.me/250788202333" target="_blank" class="btn">
+                <i class="fab fa-whatsapp"></i> Get Free Consultation
+            </a>
+            <a href="tel:+250788202333" class="btn btn-secondary">
+                <i class="fas fa-phone"></i> Call +250 788 202 333
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>GATECH-CO LTD</h3>
+                    <p>Your trusted security partner in Rwanda since 2015. We provide premium security solutions for homes and businesses across the country.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone-alt"></i> +250 788 202 333</p>
+                    <p><i class="fas fa-envelope"></i> gasarasijoshua@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kicukiro, Kigali, Rwanda</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 GATECH-CO LTD. All rights reserved. | Rwanda's Premier Security Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling for demonstration
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
